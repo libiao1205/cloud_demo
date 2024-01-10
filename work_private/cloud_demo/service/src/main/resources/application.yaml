@@ -1,0 +1,23 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: service-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.134:8848
+        group: group-1
+        namespace: ba312bc4-9357-4e06-9f3a-480e628f8d0c
+      config:
+        file-extension: yaml
+        server-addr: 192.168.1.134:8848
+#    config:
+#      name: service-server
+#      discovery:
+#        enabled: true
+#        service-id: service-server
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8082/eureka/

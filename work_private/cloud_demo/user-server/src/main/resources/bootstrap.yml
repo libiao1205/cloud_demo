@@ -1,0 +1,27 @@
+# 配置文件名称必须是bootstrap.yml否则有些参数无法加载
+server:
+  port: 8084
+spring:
+  profiles:
+    active: dev
+  application:
+    name: user-server
+  cloud:
+    nacos:
+      # 服务注册，注册到nacos
+      discovery:
+        server-addr: 192.168.1.134:8848
+        namespace: ba312bc4-9357-4e06-9f3a-480e628f8d0c
+        group: group-1
+      # 连接nacos配置中心，获取配置中心的内容
+      config:
+        server-addr: 192.168.1.134:8848
+        file-extension: yaml
+        group: group-1
+        namespace: ba312bc4-9357-4e06-9f3a-480e628f8d0c
+sys:
+  name: zhangsan
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8082/eureka/
